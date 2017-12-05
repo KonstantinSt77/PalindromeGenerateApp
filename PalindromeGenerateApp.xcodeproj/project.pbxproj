@@ -13,6 +13,7 @@
 		8B9655B91FD5EDC900893BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B9655B81FD5EDC900893BCC /* Assets.xcassets */; };
 		8B9655BC1FD5EDC900893BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9655BA1FD5EDC900893BCC /* LaunchScreen.storyboard */; };
 		8B9655BF1FD5EDC900893BCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9655BE1FD5EDC900893BCC /* main.m */; };
+		8B9655C71FD629AD00893BCC /* PolyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9655C61FD629AD00893BCC /* PolyModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		8B9655BB1FD5EDC900893BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B9655BD1FD5EDC900893BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B9655BE1FD5EDC900893BCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B9655C51FD629AD00893BCC /* PolyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PolyModel.h; sourceTree = "<group>"; };
+		8B9655C61FD629AD00893BCC /* PolyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolyModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				8B9655B01FD5EDC900893BCC /* AppDelegate.m */,
 				8B9655B21FD5EDC900893BCC /* ViewController.h */,
 				8B9655B31FD5EDC900893BCC /* ViewController.m */,
+				8B9655C51FD629AD00893BCC /* PolyModel.h */,
+				8B9655C61FD629AD00893BCC /* PolyModel.m */,
 				8B9655B51FD5EDC900893BCC /* Main.storyboard */,
 				8B9655B81FD5EDC900893BCC /* Assets.xcassets */,
 				8B9655BA1FD5EDC900893BCC /* LaunchScreen.storyboard */,
@@ -145,6 +150,7 @@
 				8B9655B41FD5EDC900893BCC /* ViewController.m in Sources */,
 				8B9655BF1FD5EDC900893BCC /* main.m in Sources */,
 				8B9655B11FD5EDC900893BCC /* AppDelegate.m in Sources */,
+				8B9655C71FD629AD00893BCC /* PolyModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
