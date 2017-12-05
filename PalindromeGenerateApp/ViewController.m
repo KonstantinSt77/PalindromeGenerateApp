@@ -12,15 +12,17 @@
 
 //LOG
 
-//2017-12-05 03:59:03.752541+0200 PalindromeGenerateApp[38516:2599065] Start Algrthm = 5
-//2017-12-05 03:59:04.741739+0200 PalindromeGenerateApp[38516:2599065] Recalculation = 4
-//2017-12-05 03:59:04.741897+0200 PalindromeGenerateApp[38516:2599065] Start Algrthm = 4
-//2017-12-05 03:59:05.773042+0200 PalindromeGenerateApp[38516:2599065] Recalculation = 3
-//2017-12-05 03:59:05.773225+0200 PalindromeGenerateApp[38516:2599065] Start Algrthm = 3
-//2017-12-05 03:59:06.589900+0200 PalindromeGenerateApp[38516:2599065] Final Palindrome = 999949999
-//2017-12-05 03:59:06.590096+0200 PalindromeGenerateApp[38516:2599065] First multiplier = 33211
-//2017-12-05 03:59:06.590189+0200 PalindromeGenerateApp[38516:2599065] Second multiplier = 30109
-//2017-12-05 03:59:06.590300+0200 PalindromeGenerateApp[38516:2599065] executionTime = 2.837806
+//optimisation to 2.181176 m/s
+
+//2017-12-05 10:48:36.841621+0200 PalindromeGenerateApp[40396:2698057] Start Algrthm = 5
+//2017-12-05 10:48:37.585172+0200 PalindromeGenerateApp[40396:2698057] Recalculation = 4
+//2017-12-05 10:48:37.585413+0200 PalindromeGenerateApp[40396:2698057] Start Algrthm = 4
+//2017-12-05 10:48:38.301677+0200 PalindromeGenerateApp[40396:2698057] Recalculation = 3
+//2017-12-05 10:48:38.301851+0200 PalindromeGenerateApp[40396:2698057] Start Algrthm = 3
+//2017-12-05 10:48:39.022269+0200 PalindromeGenerateApp[40396:2698057] Final Palindrome = 999949999
+//2017-12-05 10:48:39.022554+0200 PalindromeGenerateApp[40396:2698057] First multiplier = 33211
+//2017-12-05 10:48:39.022656+0200 PalindromeGenerateApp[40396:2698057] Second multiplier = 30109
+//2017-12-05 10:48:39.022753+0200 PalindromeGenerateApp[40396:2698057] executionTime = 2.181176
 
 #import "ViewController.h"
 #import "PolyModell.h"
@@ -45,7 +47,7 @@
 - (void)getMaxPalindromeWithNDigitNumbers:(long)n_DigitNumbers
 {
     NSLog(@"Start Algrthm = %ld",self.NDigit);
-    NSArray *palindromes = [self findPalindrome:[self multiplePrimes:[self generatePrimesFromOptimalParam:n_DigitNumbers toLimit:n_DigitNumbers]]];
+    NSArray *palindromes = [self findPalindrome:[self multiplePrimes:[self generatePrimesFromOptimalParam:[self findOptimalParametrWithNDigitNumbers:n_DigitNumbers] toLimit:n_DigitNumbers]]];
 
     if(palindromes.count>1)
     {
