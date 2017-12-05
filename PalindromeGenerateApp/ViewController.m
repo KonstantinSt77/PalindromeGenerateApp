@@ -5,12 +5,25 @@
 //  Created by Kostya on 04.12.2017.
 //  Copyright © 2017 SKS. All rights reserved.
 //
+
 //Напишите программу, которая возвращает наибольшее число палиндром, которое является произведением двух простых пятизначных чисел, а также возвращает сами сомножители.
 //Простое число - это натуральное число, которое делится нацело только на 1 и на себя само (2, 3, 5, 7, 11, …)
 //Палиндром – строка, которая читается одинаково в обоих направлениях (например ABBA)
 
+//LOG
+
+//2017-12-05 03:59:03.752541+0200 PalindromeGenerateApp[38516:2599065] Start Algrthm = 5
+//2017-12-05 03:59:04.741739+0200 PalindromeGenerateApp[38516:2599065] Recalculation = 4
+//2017-12-05 03:59:04.741897+0200 PalindromeGenerateApp[38516:2599065] Start Algrthm = 4
+//2017-12-05 03:59:05.773042+0200 PalindromeGenerateApp[38516:2599065] Recalculation = 3
+//2017-12-05 03:59:05.773225+0200 PalindromeGenerateApp[38516:2599065] Start Algrthm = 3
+//2017-12-05 03:59:06.589900+0200 PalindromeGenerateApp[38516:2599065] Final Palindrome = 999949999
+//2017-12-05 03:59:06.590096+0200 PalindromeGenerateApp[38516:2599065] First multiplier = 33211
+//2017-12-05 03:59:06.590189+0200 PalindromeGenerateApp[38516:2599065] Second multiplier = 30109
+//2017-12-05 03:59:06.590300+0200 PalindromeGenerateApp[38516:2599065] executionTime = 2.837806
+
 #import "ViewController.h"
-#import "PolyModel.h"
+#import "PolyModell.h"
 
 @interface ViewController ()
 @property (assign, nonatomic) long NDigit;
@@ -38,7 +51,7 @@
     {
         long poly = [[palindromes valueForKeyPath:@"@max.resultObject"] longValue];
         NSLog(@"Final Palindrome = %ld", poly);
-        for(PolyModel *model in palindromes)
+        for(PolyModell *model in palindromes)
         {
             if(model.resultObject == poly)
             {
@@ -127,14 +140,13 @@
     {
         for(long j=0; j<i;j++)
         {
-            PolyModel *model = [PolyModel new];
+            PolyModell *model = [PolyModell new];
             long aObject =  [[Primes objectAtIndex:i] longValue];
             long bObject =  [[Primes objectAtIndex:j] longValue];
             long resultObject = aObject*bObject;
             model.firstObject = aObject;
             model.secondObject = bObject;
             model.resultObject = resultObject;
-            //NSString *inStr = [NSString stringWithFormat: @"%ld", (long)resultObject];
             [multiple addObject:model];
         }
     }
@@ -144,7 +156,7 @@
 - (NSArray*)findPalindrome:(NSArray*)multiplePrimes
 {
     NSMutableArray *array = [NSMutableArray new];
-    for(PolyModel *model in multiplePrimes)
+    for(PolyModell *model in multiplePrimes)
     {
         NSString *inStr = [NSString stringWithFormat: @"%ld", (long)model.resultObject];
         if([self isPalindrome:inStr])
@@ -166,17 +178,5 @@
     }
     return YES;
 }
-
-//LOG
-
-//2017-12-05 03:59:03.752541+0200 PalindromeGenerateApp[38516:2599065] Start Algrthm = 5
-//2017-12-05 03:59:04.741739+0200 PalindromeGenerateApp[38516:2599065] Recalculation = 4
-//2017-12-05 03:59:04.741897+0200 PalindromeGenerateApp[38516:2599065] Start Algrthm = 4
-//2017-12-05 03:59:05.773042+0200 PalindromeGenerateApp[38516:2599065] Recalculation = 3
-//2017-12-05 03:59:05.773225+0200 PalindromeGenerateApp[38516:2599065] Start Algrthm = 3
-//2017-12-05 03:59:06.589900+0200 PalindromeGenerateApp[38516:2599065] Final Palindrome = 999949999
-//2017-12-05 03:59:06.590096+0200 PalindromeGenerateApp[38516:2599065] First multiplier = 33211
-//2017-12-05 03:59:06.590189+0200 PalindromeGenerateApp[38516:2599065] Second multiplier = 30109
-//2017-12-05 03:59:06.590300+0200 PalindromeGenerateApp[38516:2599065] executionTime = 2.837806
 
 @end

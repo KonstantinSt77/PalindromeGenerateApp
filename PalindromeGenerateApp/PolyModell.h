@@ -1,5 +1,5 @@
 //
-//  PolyModel.h
+//  PolyModell.h
 //  PalindromeGenerateApp
 //
 //  Created by Kostya on 05.12.2017.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PolyModel : NSObject
+@interface PolyModell : NSObject
 @property (assign, nonatomic) long firstObject;
 @property (assign, nonatomic) long secondObject;
 @property (assign, nonatomic) long resultObject;
